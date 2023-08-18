@@ -1,57 +1,110 @@
 * {
-  border: 6px solid black;
+  border: 2px solid black;
+  box-sizing: border-box;
 }  
  body {
   margin: 0;
   font-family: sans-serif;
   align-items: center;
   background: papayawhip;
-  color:black;
   font-size: xx-large;
 }
 .container {
   display: flex;
   min-height: 100vh; 
   flex-direction:column; 
-  justify-content: center;  
-}                  
-.a{
-  background-color:#50C878;
-  flex-grow: 2;
+  justify-content: space-between;  
+}
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  flex-grow: 3;
+  justify-content: space-between;
   align-items: center;
+  min-height: 70vh;
 }
-.b{
-  background-color:#E8ADAA;
-  flex-grow: 6;
+header,footer,aside,.wrapper{
+  flex-grow: 3;
+  margin: .5em;
+  max-height: 10vh;
 }
-.list{
-  background-color:#FFE5B4;
-  flex-grow: 2;
-}               
-.f{
+aside{
+  display:flex;
+  justify-content: space-between;
+  width:90%;
+  min-height: 20vh;
+}
+.c{
+  display:flex;
+  align-items: center;
+  justify-content: center;
   background-color:#E5E4E2;
-  flex-grow: 2;
 }
-
+.d{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color:aqua;
+}
+.e{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#E8ADAA;
+}
+aside > div {
+  flex-grow: 10;
+  margin: .5em;
+}
+main {
+  width: 90%;
+  flex-grow: 3;
+  margin: .5em;
+  background-color:#50C878;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
 @media (min-width: 600px) {
   .container {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .a{
+  header {
     width: 100%;
+    max-height: 10vh;
+    background-color:#E8ADAA;
+    display:flex;
+    align-items: center;
+    justify-content: center;
   }
-  .b{
-    width: 66%;
+  .wrapper {
+    justify-content: stretch;
+    flex-basis: 70%;
+    min-height:  80vh;
+  }
+  footer {
+    margin: .5em;
+    flex-grow: 3;
+    min-height:  80vh;
+    background-color:#E5E4E2;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 
   }
-  .list{
-    width: 33%;
-    height: 33%;
-  }
-  .f{
-    height:66%;
-  }
-}                                  
-
-
+}
+                
+/* <main style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+">
+          <div style="
+    margin: auto;
+">
+            h
+          </div>
+        </main>
+ */
